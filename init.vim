@@ -66,7 +66,8 @@ autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 
-" COC config end
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)" COC config end
 
 " gitgutter start
 set signcolumn=yes
