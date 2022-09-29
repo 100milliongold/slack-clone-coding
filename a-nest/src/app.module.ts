@@ -7,7 +7,27 @@ import { LoggerMiddleware } from './middlewares/logger.middleware';
 @Module({
   imports: [ConfigModule.forRoot()],
   controllers: [AppController],
-  providers: [AppService, ConfigService],
+  providers: [
+    {
+      provide: AppService, // 고유한 키네임
+      useClass: AppService,
+
+      // 별의별 작업 의존성작업ㅂ을 직접 할수도 있다.
+      useFactory() {
+        return {
+          a: 'b',
+        };
+      },
+    },
+    {
+      provide: 'CUSTOM_KEY',
+      useValue: 'CUSTOM_KEY',
+    },
+    {
+      provide: ConfigService,
+      useClass: ConfigService,
+    },
+  ],
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer): any {
