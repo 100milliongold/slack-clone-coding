@@ -30,7 +30,17 @@ Plug 'jparise/vim-graphql'
 Plug 'neoclide/npm.nvim', {'do' : 'npm install'}
 call plug#end()
 
+" prettier/vim-prettier start
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html Prettier
+let g:prettier#autoformat_config_files = ["~/git/slack-clone-coding/prettier.json"]
+" prettier/vim-prettier end
 
+
+
+" vim-jsx-pretty start
+let g:vim_jsx_pretty_colorful_config = 1
+" vim-jsx-pretty endt
 
 " COC config start
 set nobackup
