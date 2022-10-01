@@ -2,6 +2,7 @@ set mouse=a
 set nu
 set encoding=UTF-8
 set clipboard=unnamed
+let mapleader=","
 
 call plug#begin()
 " This is where we will add plugins to install
@@ -28,7 +29,35 @@ Plug 'peitalin/vim-jsx-typescript'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'jparise/vim-graphql'
 Plug 'neoclide/npm.nvim', {'do' : 'npm install'}
+Plug 'preservim/nerdcommenter'
 call plug#end()
+
+
+
+" NERD Commenter start
+
+" NERD Commenter
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+" customize keymapping
+map <Leader>cc <plug>NERDComToggleComment
+map <Leader>c<space> <plug>NERDComComment
+
+" NERD Commenter end
+
+
 
 " prettier/vim-prettier start
 let g:prettier#autoformat = 0
