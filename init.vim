@@ -30,6 +30,7 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'jparise/vim-graphql'
 Plug 'neoclide/npm.nvim', {'do' : 'npm install'}
 Plug 'preservim/nerdcommenter'
+Plug 'tpope/vim-dadbod'
 call plug#end()
 
 
