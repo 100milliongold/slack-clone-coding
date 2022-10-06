@@ -1,0 +1,10 @@
+{
+	"coc.preferences.formatOnSaveFiletypes": [
+		"css",
+		"markdown",
+		"jsx",
+		"typescript"
+	],
+	"styled-components.tags": ["styled", "css", "sty", "createGlobalStyle"],
+	"prettier.configPath": "/Users/xiilab/git/slack-clone-coding/prettier.json"
+}
