@@ -11,6 +11,7 @@ import { WorkspaceMembers } from '../entities/WorkspaceMembers';
     TypeOrmModule.forFeature([Users, ChannelMembers, WorkspaceMembers]),
   ],
   providers: [UsersService],
+  exports: [UsersService],
   controllers: [UsersController],
 })
 export class UsersModule {}

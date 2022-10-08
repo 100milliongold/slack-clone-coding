@@ -6,6 +6,8 @@ let mapleader=","
 
 call plug#begin()
 " This is where we will add plugins to install
+Plug 'voldikss/vim-floaterm'
+Plug 'liuchengxu/vim-which-key'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'neoclide/coc.nvim',{'branch': 'release', 'do': 'yarn install --frozen-lockfile'}
 Plug 'preservim/nerdtree'
@@ -13,9 +15,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'ctrlpvim/ctrlp.vim'
-" Plug 'prettier/vim-prettier', {
-"  \ 'do': 'yarn install --frozen-lockfile --production',
-"  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html', 'jsx'] }
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
@@ -35,6 +34,77 @@ Plug 'ekalinin/Dockerfile.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'puremourning/vimspector'
 call plug#end()
+
+
+
+" vim-which-key START
+" Map leader to which_key
+nnoremap <silent> <leader> :silent WhichKey ','<CR>
+vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual ','<CR>
+
+let g:which_key_map =  {}
+let g:which_key_sep = ': '
+" Set a shorter timeout, default is 1000
+set timeoutlen=100
+
+let g:which_key_use_floating_win = 1
+
+" Single mappings
+let g:which_key_map['/'] = [ '<Plug>NERDCommenterToggle'       			 , 'comment' ]
+let g:which_key_map['f'] = [ ':Files'                          			 , 'search files' ]
+let g:which_key_map['h'] = [ '<C-W>s'                          			 , 'split below']
+let g:which_key_map['S'] = [ ':Startify'                       			 , 'start screen' ]
+let g:which_key_map['T'] = [ ':Rg'                             			 , 'search text' ]
+let g:which_key_map['E'] = [ ':SSave'                          			 , 'save session']
+let g:which_key_map['L'] = [ ':SLoad'                          			 , 'load session']
+let g:which_key_map['l'] = [ ':Limelight!!'                     		 , 'limelight']
+let g:which_key_map['z'] = [ ':Goyo'                            		 , 'zen mode']
+let g:which_key_map['r'] = [ ':RnvimrToggle'                    		 , 'ranger' ]
+let g:which_key_map['g'] = [ ':FloatermNew --height=0.6 --width=0.8 lazygit'     , 'git']
+let g:which_key_map['d'] = [ ':FloatermNew --height=0.6 --width=0.8 lazydocker'  , 'docker']
+let g:which_key_map['t'] = [ ':FloatermNew --height=0.6 --width=0.8 '            , 'terminal']
+let g:which_key_map['v'] = [ '<C-W>v'                          			 , 'split right']
+
+
+" s is for search
+let g:which_key_map.s = {
+      \ 'name' : '+search' ,
+      \ '/' : [':History/'                 , 'history'],
+      \ ';' : [':Commands'                 , 'commands'],
+      \ 'a' : [':Ag'                       , 'text Ag'],
+      \ 'b' : [':BLines'                   , 'current buffer'],
+      \ 'B' : [':Buffers'                  , 'open buffers'],
+      \ 'c' : [':Commits'                  , 'commits'],
+      \ 'C' : [':BCommits'                 , 'buffer commits'],
+      \ 'f' : [':Files'                    , 'files'],
+      \ 'h' : [':History'                  , 'file history'],
+      \ 'H' : [':History:'                 , 'command history'],
+      \ 'l' : [':Lines'                    , 'lines'] ,
+      \ 'm' : [':Marks'                    , 'marks'] ,
+      \ 'M' : [':Maps'                     , 'normal maps'] ,
+      \ 'p' : [':Helptags'                 , 'help tags'] ,
+      \ 'P' : [':Tags'                     , 'project tags'],
+      \ 's' : [':CocList snippets'         , 'snippets'],
+      \ 'S' : [':Colors'                   , 'color schemes'],
+      \ 't' : [':Rg'                       , 'Rg text'],
+      \ 'T' : [':BTags'                    , 'buffer tags'],
+      \ 'w' : [':Windows'                  , 'search windows'],
+      \ 'y' : [':Filetypes'                , 'file types'],
+      \ 'z' : [':FZF'                      , 'FZF'],
+      \ }
+
+" P is for vim-plug
+let g:which_key_map.p = {
+      \ 'name' : '+plug' ,
+      \ 'i' : [':PlugInstall'              , 'install'],
+      \ 'u' : [':PlugUpdate'               , 'update'],
+      \ 'c' : [':PlugClean'                , 'clean'],
+      \ 's' : [':source ~/.config/nvim/init.vim', 'source vimrc'],
+      \ }
+
+" Register which key map
+call which_key#register(',', "g:which_key_map")
+" vim-which-key END
 
 " mark down priview
 
@@ -225,7 +295,7 @@ let g:gitgutter_sign_modified = '✹'
 let g:gitgutter_sign_removed = '-'
 let g:gitgutter_sign_removed_first_line = '-'
 let g:gitgutter_sign_modified_removed = '-'
-let g:coc_confing_home = '/Users/xiilab/git/slack-clone-coding/coc-settings.json'
+let g:coc_confing_home = '~/git/slack-clone-coding/coc-settings.json'
 " gitgutter end
 
 

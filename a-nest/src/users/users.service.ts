@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { DataSource, Repository } from 'typeorm';
+import { Connection, Repository } from 'typeorm';
 import { Users } from '../entities/Users';
 import bcrypt from 'bcrypt';
 
@@ -10,11 +10,11 @@ export class UsersService {
     @InjectRepository(Users)
     private usersRepository: Repository<Users>,
 
-    private dataSource: DataSource,
+    private connection: Connection,
   ) {}
 
   async join(email: string, nickname: string, password: string) {
-    const queryRunner = this.dataSource.createQueryRunner();
+    const queryRunner = this.connection.createQueryRunner();
     await queryRunner.connect();
     await queryRunner.startTransaction();
 
