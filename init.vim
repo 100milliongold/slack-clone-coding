@@ -18,14 +18,11 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'maxmellon/vim-jsx-pretty'
 Plug 'dense-analysis/ale'
 Plug 'ryanoasis/vim-devicons'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'jparise/vim-graphql'
 Plug 'neoclide/npm.nvim', {'do' : 'npm install'}
 Plug 'preservim/nerdcommenter'
@@ -33,7 +30,53 @@ Plug 'tpope/vim-dadbod'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'puremourning/vimspector'
 Plug 'liuchengxu/vista.vim'
+Plug 'mhinz/vim-startify'
 call plug#end()
+
+
+"vim-floaterm Start
+hi Floaterm guibg=black
+hi FloatermBorder guibg=orange guifg=cyan
+hi FloatermNC guifg=gray
+"vim-floaterm END
+
+
+
+" vim-startify start
+
+let g:startify_custom_header = [
+            \ '___       __            ______________   ________            _____     ________                 ______                          ',
+            \ '__ |     / /_______________  /_____  /   ___  __ )_____________  /_    ___  __ \_______   _________  /__________________________',
+            \ '__ | /| / /_  __ \_  ___/_  /_  __  /    __  __  |  _ \_  ___/  __/    __  / / /  _ \_ | / /  _ \_  /_  __ \__  __ \  _ \_  ___/',
+            \ '__ |/ |/ / / /_/ /  /   _  / / /_/ /     _  /_/ //  __/(__  )/ /_      _  /_/ //  __/_ |/ //  __/  / / /_/ /_  /_/ /  __/  /    ',
+            \ '____/|__/  \____//_/    /_/  \__,_/      /_____/ \___//____/ \__/      /_____/ \___/_____/ \___//_/  \____/_  .___/\___//_/     ',
+            \ '                                                                                                           /_/                  '
+\ ]
+
+" returns all modified files of the current git repo
+" `2>/dev/null` makes the command fail quietly, so that when we are not
+" in a git repo, the list will be empty
+function! s:gitModified()
+    let files = systemlist('git ls-files -m 2>/dev/null')
+    return map(files, "{'line': v:val, 'path': v:val}")
+endfunction
+
+" same as above, but show untracked files, honouring .gitignore
+function! s:gitUntracked()
+    let files = systemlist('git ls-files -o --exclude-standard 2>/dev/null')
+    return map(files, "{'line': v:val, 'path': v:val}")
+endfunction
+
+let g:startify_lists = [
+        \ { 'type': 'files',     'header': ['   MRU']            },
+        \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
+        \ { 'type': 'sessions',  'header': ['   Sessions']       },
+        \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+        \ { 'type': function('s:gitModified'),  'header': ['   git modified']},
+        \ { 'type': function('s:gitUntracked'), 'header': ['   git untracked']},
+        \ { 'type': 'commands',  'header': ['   Commands']       },
+        \ ]
+" vim-startify end
 
 " vista Start
 map <F8> :Vista<CR>
@@ -98,12 +141,11 @@ let g:which_key_map['T'] = [ ':Rg'                             			 , 'search tex
 let g:which_key_map['E'] = [ ':SSave'                          			 , 'save session']
 let g:which_key_map['L'] = [ ':SLoad'                          			 , 'load session']
 let g:which_key_map['l'] = [ ':Limelight!!'                     		 , 'limelight']
-let g:which_key_map['z'] = [ ':Goyo'                            		 , 'zen mode']
 let g:which_key_map['r'] = [ ':RnvimrToggle'                    		 , 'ranger' ]
 let g:which_key_map['g'] = [ ':FloatermNew --height=0.6 --width=0.8 lazygit'     , 'git']
-let g:which_key_map['d'] = [ ':FloatermNew --height=0.6 --width=0.8 lazydocker'  , 'docker']
 let g:which_key_map['t'] = [ ':FloatermNew --height=0.6 --width=0.8 '            , 'terminal']
 let g:which_key_map['v'] = [ '<C-W>v'                          			 , 'split right']
+let g:which_key_map['r'] = [ ':CocCommand tsserver.restart' 			 , 'Coc tsserver restart']
 
 
 " s is for search
@@ -341,6 +383,7 @@ let g:coc_confing_home = '~/git/slack-clone-coding/coc-settings.json'
 
 
 " NerdTree start
+map <F7> :NERDTree<CR>
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
