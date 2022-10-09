@@ -1,5 +1,4 @@
 import {
-  BadRequestException,
   Injectable,
   UnauthorizedException,
 } from '@nestjs/common';
@@ -34,23 +33,19 @@ export class UsersService {
     const hashedPassword = await bcrypt.hash(password, 12);
 
     try {
-	    await queryRunner.manager.getRepository(Users).save({
-      email,
-      nickname,
-      password: hashedPassword,
-    });
+      await queryRunner.manager.getRepository(Users).save({
+        email,
+        nickname,
+        password: hashedPassword,
+      });
 
-    await queryRunner.commitTransaction();
+      await queryRunner.commitTransaction();
+    } catch (error) {
+      console.error(error);
+      await queryRunner.rollbackTransaction();
+      throw error;
+    } finally {
+      await queryRunner.release();
     }
-    catch(error){
-	    console.error(error);
-	    await queryRunner.rollbackTransaction();
-	    throw error;
-    }
-    finally {
-	    await queryRunner.release();
-    }
-
-    
   }
 }
