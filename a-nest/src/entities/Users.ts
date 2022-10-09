@@ -42,7 +42,7 @@ export class Users {
   })
   @Column('varchar', { name: 'nickname', length: 30 })
   nickname: string;
-  
+
   @IsString()
   @IsNotEmpty()
   @ApiProperty({
