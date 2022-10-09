@@ -1,0 +1,324 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AppController	src/app.controller.ts	/^export class AppController {$/;"	c
+AppModule	src/app.module.ts	/^export class AppModule implements NestModule {$/;"	c
+AppService	src/app.service.ts	/^export class AppService {$/;"	c
+Channel	src/entities/ChannelChats.ts	/^  Channel: Channels;$/;"	m
+Channel	src/entities/ChannelMembers.ts	/^  Channel: Channels;$/;"	m
+ChannelChats	src/entities/ChannelChats.ts	/^export class ChannelChats {$/;"	c
+ChannelChats	src/entities/Channels.ts	/^  ChannelChats: ChannelChats[];$/;"	m
+ChannelChats	src/entities/Users.ts	/^  ChannelChats: ChannelChats[];$/;"	m
+ChannelId	src/entities/ChannelChats.ts	/^  ChannelId: number | null;$/;"	m
+ChannelId	src/entities/ChannelMembers.ts	/^  ChannelId: number;$/;"	m
+ChannelMembers	src/entities/ChannelMembers.ts	/^export class ChannelMembers {$/;"	c
+ChannelMembers	src/entities/Channels.ts	/^  ChannelMembers: ChannelMembers[];$/;"	m
+ChannelMembers	src/entities/Users.ts	/^  ChannelMembers: ChannelMembers[];$/;"	m
+Channels	src/entities/Channels.ts	/^export class Channels {$/;"	c
+Channels	src/entities/Users.ts	/^  Channels: Channels[];$/;"	m
+Channels	src/entities/Workspaces.ts	/^  Channels: Channels[];$/;"	m
+ChannelsController	src/channels/channels.controller.ts	/^export class ChannelsController {$/;"	c
+ChannelsModule	src/channels/channels.module.ts	/^export class ChannelsModule {}$/;"	c
+ChannelsService	src/channels/channels.service.ts	/^export class ChannelsService {}$/;"	c
+ChatId	src/entities/Mentions.ts	/^  ChatId: number | null;$/;"	m
+CreateInitalData	src/database/seeds/create-initial-data.ts	/^export class CreateInitalData implements Seeder {$/;"	c
+DMs	src/entities/DMs.ts	/^export class DMs {$/;"	c
+DMs	src/entities/Users.ts	/^  DMs: DMs[];$/;"	m
+DMs	src/entities/Workspaces.ts	/^  DMs: DMs[];$/;"	m
+DMs2	src/entities/Users.ts	/^  DMs2: DMs[];$/;"	m
+DmsController	src/dms/dms.controller.ts	/^export class DmsController {$/;"	c
+DmsModule	src/dms/dms.module.ts	/^export class DmsModule {}$/;"	c
+DmsService	src/dms/dms.service.ts	/^export class DmsService {}$/;"	c
+JoinRequestDto	src/users/dto/join.request.dto.ts	/^export class JoinRequestDto extends PickType(Users, [$/;"	c
+LoggerMiddleware	src/middlewares/logger.middleware.ts	/^export class LoggerMiddleware implements NestMiddleware {$/;"	c
+Members	src/entities/Channels.ts	/^  Members: Users[];$/;"	m
+Members	src/entities/Workspaces.ts	/^  Members: Users[];$/;"	m
+Mentions	src/entities/Mentions.ts	/^export class Mentions {$/;"	c
+Mentions	src/entities/Users.ts	/^  Mentions: Mentions[];$/;"	m
+Mentions	src/entities/Workspaces.ts	/^  Mentions: Mentions[];$/;"	m
+Mentions2	src/entities/Users.ts	/^  Mentions2: Mentions[];$/;"	m
+OwnedWorkspaces	src/entities/Users.ts	/^  OwnedWorkspaces: Workspaces[];$/;"	m
+Owner	src/entities/Workspaces.ts	/^  Owner: Users;$/;"	m
+OwnerId	src/entities/Workspaces.ts	/^  OwnerId: number | null;$/;"	m
+Receiver	src/entities/DMs.ts	/^  Receiver: Users;$/;"	m
+Receiver	src/entities/Mentions.ts	/^  Receiver: Users;$/;"	m
+ReceiverId	src/entities/DMs.ts	/^  ReceiverId: number | null;$/;"	m
+ReceiverId	src/entities/Mentions.ts	/^  ReceiverId: number | null;$/;"	m
+Sender	src/entities/DMs.ts	/^  Sender: Users;$/;"	m
+Sender	src/entities/Mentions.ts	/^  Sender: Users;$/;"	m
+SenderId	src/entities/DMs.ts	/^  SenderId: number | null;$/;"	m
+SenderId	src/entities/Mentions.ts	/^  SenderId: number | null;$/;"	m
+Token	src/common/decorators/token.decorator.ts	/^export const Token = createParamDecorator($/;"	v
+UndefinedToNullInterceptor	src/common/interceptors/undefinedToNull.interceptor.ts	/^export class UndefinedToNullInterceptor implements NestInterceptor {$/;"	c
+User	src/common/decorators/user.decorator.ts	/^export const User = createParamDecorator($/;"	v
+User	src/entities/ChannelChats.ts	/^  User: Users;$/;"	m
+User	src/entities/ChannelMembers.ts	/^  User: Users;$/;"	m
+User	src/entities/WorkspaceMembers.ts	/^  User: Users;$/;"	m
+UserDto	src/common/dto/user.dto.ts	/^export class UserDto extends JoinRequestDto {$/;"	c
+UserId	src/entities/ChannelChats.ts	/^  UserId: number | null;$/;"	m
+UserId	src/entities/ChannelMembers.ts	/^  UserId: number;$/;"	m
+UserId	src/entities/WorkspaceMembers.ts	/^  UserId: number;$/;"	m
+Users	src/entities/Users.ts	/^export class Users {$/;"	c
+UsersController	src/users/users.controller.ts	/^export class UsersController {$/;"	c
+UsersModule	src/users/users.module.ts	/^export class UsersModule {}$/;"	c
+UsersService	src/users/users.service.ts	/^export class UsersService {$/;"	c
+Workspace	src/entities/Channels.ts	/^  Workspace: Workspaces;$/;"	m
+Workspace	src/entities/DMs.ts	/^  Workspace: Workspaces;$/;"	m
+Workspace	src/entities/Mentions.ts	/^  Workspace: Workspaces;$/;"	m
+Workspace	src/entities/WorkspaceMembers.ts	/^  Workspace: Workspaces;$/;"	m
+WorkspaceId	src/database/seeds/create-initial-data.ts	/^          WorkspaceId: 1,$/;"	m
+WorkspaceId	src/entities/Channels.ts	/^  WorkspaceId: number | null;$/;"	m
+WorkspaceId	src/entities/DMs.ts	/^  WorkspaceId: number | null;$/;"	m
+WorkspaceId	src/entities/Mentions.ts	/^  WorkspaceId: number | null;$/;"	m
+WorkspaceId	src/entities/WorkspaceMembers.ts	/^  WorkspaceId: number;$/;"	m
+WorkspaceMembers	src/entities/Users.ts	/^  WorkspaceMembers: WorkspaceMembers[];$/;"	m
+WorkspaceMembers	src/entities/WorkspaceMembers.ts	/^export class WorkspaceMembers {$/;"	c
+WorkspaceMembers	src/entities/Workspaces.ts	/^  WorkspaceMembers: WorkspaceMembers[];$/;"	m
+Workspaces	src/entities/Users.ts	/^  Workspaces: Workspaces[];$/;"	m
+Workspaces	src/entities/Workspaces.ts	/^export class Workspaces {$/;"	c
+WorkspacesController	src/workspaces/workspaces.controller.ts	/^export class WorkspacesController {$/;"	c
+WorkspacesModule	src/workspaces/workspaces.module.ts	/^export class WorkspacesModule {}$/;"	c
+WorkspacesService	src/workspaces/workspaces.service.ts	/^export class WorkspacesService {}$/;"	c
+a	src/app.module.ts	/^          a: 'b',$/;"	m
+autoLoadEntities	ormconfig.ts	/^  autoLoadEntities: true,$/;"	m
+bcrypt	src/users/users.service.ts	/^import bcrypt from 'bcrypt';$/;"	I
+beforeEach	src/app.controller.spec.ts	/^  beforeEach(async () => {$/;"	m
+beforeEach	src/channels/channels.controller.spec.ts	/^  beforeEach(async () => {$/;"	m
+beforeEach	src/channels/channels.service.spec.ts	/^  beforeEach(async () => {$/;"	m
+beforeEach	src/dms/dms.controller.spec.ts	/^  beforeEach(async () => {$/;"	m
+beforeEach	src/dms/dms.service.spec.ts	/^  beforeEach(async () => {$/;"	m
+beforeEach	src/users/users.controller.spec.ts	/^  beforeEach(async () => {$/;"	m
+beforeEach	src/users/users.service.spec.ts	/^  beforeEach(async () => {$/;"	m
+beforeEach	src/workspaces/workspaces.controller.spec.ts	/^  beforeEach(async () => {$/;"	m
+beforeEach	src/workspaces/workspaces.service.spec.ts	/^  beforeEach(async () => {$/;"	m
+beforeEach	test/app.e2e-spec.ts	/^  beforeEach(async () => {$/;"	m
+bootstrap	src/main.ts	/^async function bootstrap() {$/;"	f
+bootstrap	src/main.ts	/^bootstrap();$/;"	m
+cascade	src/entities/Channels.ts	/^    cascade: ['insert'],$/;"	m
+category	src/entities/Mentions.ts	/^  category: 'chat' | 'dm' | 'system';$/;"	m
+categoryToType1664777314195	src/migrations/1664777314195-categoryToType.ts	/^export class categoryToType1664777314195 implements MigrationInterface {$/;"	c
+charset	ormconfig.ts	/^  charset: 'utf8mb4',$/;"	m
+cli	ormconfig.ts	/^  cli: { migrationsDir: 'src\/migrations' },$/;"	m
+configure	src/app.module.ts	/^  configure(consumer: MiddlewareConsumer): any {$/;"	m
+connection	src/users/users.service.ts	/^    private connection: Connection,$/;"	m
+constructor	src/app.controller.ts	/^  constructor(private readonly appService: AppService) {}$/;"	m
+constructor	src/app.service.ts	/^  constructor(private readonly configService: ConfigService) {}$/;"	m
+constructor	src/users/users.controller.ts	/^  constructor(private usersService: UsersService) {}$/;"	m
+constructor	src/users/users.service.ts	/^  constructor($/;"	m
+content	src/entities/ChannelChats.ts	/^  content: string;$/;"	m
+content	src/entities/DMs.ts	/^  content: string;$/;"	m
+context	src/common/interceptors/undefinedToNull.interceptor.ts	/^    context: ExecutionContext,$/;"	m
+controllers	src/app.controller.spec.ts	/^      controllers: [AppController],$/;"	m
+controllers	src/app.module.ts	/^  controllers: [AppController],$/;"	m
+controllers	src/channels/channels.controller.spec.ts	/^      controllers: [ChannelsController],$/;"	m
+controllers	src/channels/channels.module.ts	/^  controllers: [ChannelsController],$/;"	m
+controllers	src/dms/dms.controller.spec.ts	/^      controllers: [DmsController],$/;"	m
+controllers	src/dms/dms.module.ts	/^  controllers: [DmsController]$/;"	m
+controllers	src/users/users.controller.spec.ts	/^      controllers: [UsersController],$/;"	m
+controllers	src/users/users.module.ts	/^  controllers: [UsersController],$/;"	m
+controllers	src/workspaces/workspaces.controller.spec.ts	/^      controllers: [WorkspacesController],$/;"	m
+controllers	src/workspaces/workspaces.module.ts	/^  controllers: [WorkspacesController]$/;"	m
+cookie	src/main.ts	/^      cookie: {$/;"	m
+cookieParser	src/main.ts	/^import cookieParser from 'cookie-parser';$/;"	I
+createChannels	src/channels/channels.controller.ts	/^  createChannels() {}$/;"	m
+createWorkspace	src/workspaces/workspaces.controller.ts	/^  createWorkspace() {}$/;"	m
+createdAt	src/entities/ChannelChats.ts	/^  createdAt: Date;$/;"	m
+createdAt	src/entities/ChannelMembers.ts	/^  createdAt: Date;$/;"	m
+createdAt	src/entities/Channels.ts	/^  createdAt: Date;$/;"	m
+createdAt	src/entities/DMs.ts	/^  createdAt: Date;$/;"	m
+createdAt	src/entities/Mentions.ts	/^  createdAt: Date;$/;"	m
+createdAt	src/entities/Users.ts	/^  createdAt: Date;$/;"	m
+createdAt	src/entities/WorkspaceMembers.ts	/^  createdAt: Date;$/;"	m
+createdAt	src/entities/Workspaces.ts	/^  createdAt: Date;$/;"	m
+database	ormconfig.ts	/^  database: process.env.DB_DATABASE,$/;"	m
+default	src/entities/Channels.ts	/^    default: () => "'0'",$/;"	m
+deletedAt	src/entities/Users.ts	/^  deletedAt: Date | null;$/;"	m
+deletedAt	src/entities/Workspaces.ts	/^  deletedAt: Date | null;$/;"	m
+describe	src/app.controller.spec.ts	/^  describe('root', () => {$/;"	m
+describe	src/app.controller.spec.ts	/^describe('AppController', () => {$/;"	m
+describe	src/channels/channels.controller.spec.ts	/^describe('ChannelsController', () => {$/;"	m
+describe	src/channels/channels.service.spec.ts	/^describe('ChannelsService', () => {$/;"	m
+describe	src/dms/dms.controller.spec.ts	/^describe('DmsController', () => {$/;"	m
+describe	src/dms/dms.service.spec.ts	/^describe('DmsService', () => {$/;"	m
+describe	src/users/users.controller.spec.ts	/^describe('UsersController', () => {$/;"	m
+describe	src/users/users.service.spec.ts	/^describe('UsersService', () => {$/;"	m
+describe	src/workspaces/workspaces.controller.spec.ts	/^describe('WorkspacesController', () => {$/;"	m
+describe	src/workspaces/workspaces.service.spec.ts	/^describe('WorkspacesService', () => {$/;"	m
+describe	test/app.e2e-spec.ts	/^describe('AppController (e2e)', () => {$/;"	m
+description	src/dms/dms.controller.ts	/^    description: '불려올 페이지',$/;"	m
+description	src/dms/dms.controller.ts	/^    description: '사용자 아이디',$/;"	m
+description	src/dms/dms.controller.ts	/^    description: '워크 스페이스 url',$/;"	m
+description	src/dms/dms.controller.ts	/^    description: '한번에 가져오는 갯수',$/;"	m
+description	src/entities/Users.ts	/^    description: '닉네임',$/;"	m
+description	src/entities/Users.ts	/^    description: '비밀번호',$/;"	m
+description	src/entities/Users.ts	/^    description: '이메일',$/;"	m
+description	src/users/users.controller.ts	/^    description: '서버에러',$/;"	m
+description	src/users/users.controller.ts	/^    description: '성공',$/;"	m
+dotenv	ormconfig.ts	/^import dotenv from 'dotenv';$/;"	I
+down	src/migrations/1664777314195-categoryToType.ts	/^  public async down(queryRunner: QueryRunner): Promise<void> {$/;"	m
+email	src/entities/Users.ts	/^  email: string;$/;"	m
+entities	ormconfig.ts	/^  entities: [$/;"	m
+example	src/common/dto/user.dto.ts	/^    example: 1,$/;"	m
+example	src/entities/Users.ts	/^    example: '1q2w3e',$/;"	m
+example	src/entities/Users.ts	/^    example: 'zerocho@gmail.com',$/;"	m
+example	src/entities/Users.ts	/^    example: '제로초',$/;"	m
+expect	src/app.controller.spec.ts	/^      expect(appController.getHello()).toBe('Hello World!');$/;"	m
+expect	src/channels/channels.controller.spec.ts	/^    expect(controller).toBeDefined();$/;"	m
+expect	src/channels/channels.service.spec.ts	/^    expect(service).toBeDefined();$/;"	m
+expect	src/dms/dms.controller.spec.ts	/^    expect(controller).toBeDefined();$/;"	m
+expect	src/dms/dms.service.spec.ts	/^    expect(service).toBeDefined();$/;"	m
+expect	src/users/users.controller.spec.ts	/^    expect(controller).toBeDefined();$/;"	m
+expect	src/users/users.service.spec.ts	/^    expect(service).toBeDefined();$/;"	m
+expect	src/workspaces/workspaces.controller.spec.ts	/^    expect(controller).toBeDefined();$/;"	m
+expect	src/workspaces/workspaces.service.spec.ts	/^    expect(service).toBeDefined();$/;"	m
+exports	src/users/users.module.ts	/^  exports: [UsersService],$/;"	m
+getAllChannels	src/channels/channels.controller.ts	/^  getAllChannels() {}$/;"	m
+getAllMembers	src/channels/channels.controller.ts	/^  getAllMembers() {}$/;"	m
+getAllMembersFromWorkspace	src/workspaces/workspaces.controller.ts	/^  getAllMembersFromWorkspace() {}$/;"	m
+getChat	src/dms/dms.controller.ts	/^  getChat(@Query() query, @Param() param) {$/;"	m
+getChats	src/channels/channels.controller.ts	/^  getChats(@Query() query, @Param() param) {$/;"	m
+getHello	src/app.controller.ts	/^  getHello(): string {$/;"	m
+getMemberInfoWorkspace	src/workspaces/workspaces.controller.ts	/^  getMemberInfoWorkspace() {}$/;"	m
+getMyWorkspaces	src/workspaces/workspaces.controller.ts	/^  getMyWorkspaces() {}$/;"	m
+getSpecificChannel	src/channels/channels.controller.ts	/^  getSpecificChannel() {}$/;"	m
+getUser	src/app.service.ts	/^  getUser(): string {$/;"	m
+getUsers	src/users/users.controller.ts	/^  getUsers(@User() user) {$/;"	m
+host	ormconfig.ts	/^  host: 'localhost',$/;"	m
+httpOnly	src/main.ts	/^        httpOnly: true,$/;"	m
+id	src/common/dto/user.dto.ts	/^  id: number;$/;"	m
+id	src/database/seeds/create-initial-data.ts	/^          id: 1,$/;"	m
+id	src/entities/ChannelChats.ts	/^  id: number;$/;"	m
+id	src/entities/Channels.ts	/^  id: number;$/;"	m
+id	src/entities/DMs.ts	/^  id: number;$/;"	m
+id	src/entities/Mentions.ts	/^  id: number;$/;"	m
+id	src/entities/Users.ts	/^  id: number;$/;"	m
+id	src/entities/Workspaces.ts	/^  id: number;$/;"	m
+if	src/main.ts	/^  if (module.hot) {$/;"	m
+if	src/users/users.service.ts	/^    if (!email) {$/;"	m
+if	src/users/users.service.ts	/^    if (!nickname) {$/;"	m
+if	src/users/users.service.ts	/^    if (!password) {$/;"	m
+if	src/users/users.service.ts	/^    if (user) {$/;"	m
+imports	src/app.module.ts	/^  imports: [$/;"	m
+imports	src/users/users.module.ts	/^  imports: [$/;"	m
+imports	test/app.e2e-spec.ts	/^      imports: [AppModule],$/;"	m
+intercept	src/common/interceptors/undefinedToNull.interceptor.ts	/^  intercept($/;"	m
+inverseJoinColumn	src/entities/Users.ts	/^    inverseJoinColumn: {$/;"	m
+inviteMembers	src/channels/channels.controller.ts	/^  inviteMembers() {}$/;"	m
+inviteMembersToWorkspace	src/workspaces/workspaces.controller.ts	/^  inviteMembersToWorkspace() {}$/;"	m
+isGlobal	src/app.module.ts	/^      isGlobal: true,$/;"	m
+it	src/app.controller.spec.ts	/^    it('should return "Hello World!"', () => {$/;"	m
+it	src/channels/channels.controller.spec.ts	/^  it('should be defined', () => {$/;"	m
+it	src/channels/channels.service.spec.ts	/^  it('should be defined', () => {$/;"	m
+it	src/dms/dms.controller.spec.ts	/^  it('should be defined', () => {$/;"	m
+it	src/dms/dms.service.spec.ts	/^  it('should be defined', () => {$/;"	m
+it	src/users/users.controller.spec.ts	/^  it('should be defined', () => {$/;"	m
+it	src/users/users.service.spec.ts	/^  it('should be defined', () => {$/;"	m
+it	src/workspaces/workspaces.controller.spec.ts	/^  it('should be defined', () => {$/;"	m
+it	src/workspaces/workspaces.service.spec.ts	/^  it('should be defined', () => {$/;"	m
+it	test/app.e2e-spec.ts	/^  it('\/ (GET)', () => {$/;"	m
+join	src/users/users.controller.ts	/^  join(@Body() body: JoinRequestDto) {$/;"	m
+join	src/users/users.service.ts	/^  async join(email: string, nickname: string, password: string) {$/;"	m
+joinColumn	src/entities/Users.ts	/^    joinColumn: {$/;"	m
+keepConnectionAlive	ormconfig.ts	/^  keepConnectionAlive: true,$/;"	m
+kickMemberFromWorkspace	src/workspaces/workspaces.controller.ts	/^  kickMemberFromWorkspace() {}$/;"	m
+logOut	src/users/users.controller.ts	/^  logOut(@Req() req, @Res() res) {$/;"	m
+loggedInAt	src/entities/WorkspaceMembers.ts	/^  loggedInAt: Date | null;$/;"	m
+logging	ormconfig.ts	/^  logging: true,$/;"	m
+login	src/users/users.controller.ts	/^  login(@User() user) {$/;"	m
+migrations	ormconfig.ts	/^  migrations: [__dirname + '\/src\/migrations\/*.ts'],$/;"	m
+module.exports	webpack-hmr.config.js	/^module.exports = function (options, webpack) {$/;"	f
+module.exports.parser	.eslintrc.js	/^  parser: '@typescript-eslint\/parser',$/;"	p
+module.exports.parserOptions	.eslintrc.js	/^  parserOptions: {$/;"	p
+name	src/database/seeds/create-initial-data.ts	/^          name: 'Sleact',$/;"	m
+name	src/database/seeds/create-initial-data.ts	/^          name: '일반',$/;"	m
+name	src/dms/dms.controller.ts	/^    name: 'id',$/;"	m
+name	src/dms/dms.controller.ts	/^    name: 'page',$/;"	m
+name	src/dms/dms.controller.ts	/^    name: 'perPage',$/;"	m
+name	src/dms/dms.controller.ts	/^    name: 'url',$/;"	m
+name	src/entities/Channels.ts	/^    name: 'private',$/;"	m
+name	src/entities/Channels.ts	/^  name: string;$/;"	m
+name	src/entities/Users.ts	/^      name: 'ChannelId',$/;"	m
+name	src/entities/Users.ts	/^      name: 'UserId',$/;"	m
+name	src/entities/Users.ts	/^      name: 'WorkspaceId',$/;"	m
+name	src/entities/Users.ts	/^    name: 'channelmembers',$/;"	m
+name	src/entities/Users.ts	/^    name: 'workspacemembers',$/;"	m
+name	src/entities/Workspaces.ts	/^  name: string;$/;"	m
+next	src/common/interceptors/undefinedToNull.interceptor.ts	/^    next: CallHandler<any>,$/;"	m
+next	src/middlewares/logger.middleware.ts	/^    next();$/;"	m
+nickname	src/entities/Users.ts	/^  nickname: string;$/;"	m
+nullable	src/entities/Channels.ts	/^    nullable: true,$/;"	m
+onDelete	src/entities/ChannelChats.ts	/^    onDelete: 'SET NULL',$/;"	m
+onDelete	src/entities/ChannelMembers.ts	/^    onDelete: 'CASCADE',$/;"	m
+onDelete	src/entities/Channels.ts	/^    onDelete: 'SET NULL',$/;"	m
+onDelete	src/entities/DMs.ts	/^    onDelete: 'SET NULL',$/;"	m
+onDelete	src/entities/Mentions.ts	/^    onDelete: 'SET NULL',$/;"	m
+onDelete	src/entities/WorkspaceMembers.ts	/^    onDelete: 'CASCADE',$/;"	m
+onDelete	src/entities/Workspaces.ts	/^    onDelete: 'SET NULL',$/;"	m
+onUpdate	src/entities/ChannelChats.ts	/^    onUpdate: 'CASCADE',$/;"	m
+onUpdate	src/entities/ChannelMembers.ts	/^    onUpdate: 'CASCADE',$/;"	m
+onUpdate	src/entities/Channels.ts	/^    onUpdate: 'CASCADE',$/;"	m
+onUpdate	src/entities/DMs.ts	/^    onUpdate: 'CASCADE',$/;"	m
+onUpdate	src/entities/Mentions.ts	/^    onUpdate: 'CASCADE',$/;"	m
+onUpdate	src/entities/WorkspaceMembers.ts	/^    onUpdate: 'CASCADE',$/;"	m
+onUpdate	src/entities/Workspaces.ts	/^    onUpdate: 'CASCADE',$/;"	m
+passport	src/main.ts	/^import passport from 'passport';$/;"	I
+password	ormconfig.ts	/^  password: process.env.DB_PASSWORD,$/;"	m
+password	src/entities/Users.ts	/^  password: string;$/;"	m
+password	src/users/users.service.ts	/^      password: hashedPassword,$/;"	m
+port	ormconfig.ts	/^  port: 3306,$/;"	m
+postChat	src/channels/channels.controller.ts	/^  postChat(@Body() body) {}$/;"	m
+postChat	src/dms/dms.controller.ts	/^  postChat(@Body() body) {}$/;"	m
+postHello	src/app.controller.ts	/^  postHello(): string {$/;"	m
+postUser	src/app.service.ts	/^  postUser(): string {$/;"	m
+private	src/database/seeds/create-initial-data.ts	/^          private: false,$/;"	m
+private	src/entities/Channels.ts	/^  private: boolean | null;$/;"	m
+provide	src/app.module.ts	/^      provide: 'CUSTOM_KEY',$/;"	m
+provide	src/app.module.ts	/^      provide: AppService, \/\/ 고유한 키네임$/;"	m
+provide	src/app.module.ts	/^      provide: ConfigService,$/;"	m
+providers	src/app.controller.spec.ts	/^      providers: [AppService],$/;"	m
+providers	src/app.module.ts	/^  providers: [$/;"	m
+providers	src/channels/channels.module.ts	/^  providers: [ChannelsService]$/;"	m
+providers	src/channels/channels.service.spec.ts	/^      providers: [ChannelsService],$/;"	m
+providers	src/dms/dms.module.ts	/^  providers: [DmsService],$/;"	m
+providers	src/dms/dms.service.spec.ts	/^      providers: [DmsService],$/;"	m
+providers	src/users/users.module.ts	/^  providers: [UsersService],$/;"	m
+providers	src/users/users.service.spec.ts	/^      providers: [UsersService],$/;"	m
+providers	src/workspaces/workspaces.module.ts	/^  providers: [WorkspacesService],$/;"	m
+providers	src/workspaces/workspaces.service.spec.ts	/^      providers: [WorkspacesService],$/;"	m
+referencedColumnName	src/entities/Users.ts	/^      referencedColumnName: 'id',$/;"	m
+required	src/common/dto/user.dto.ts	/^    required: true,$/;"	m
+required	src/dms/dms.controller.ts	/^    required: true,$/;"	m
+resave	src/main.ts	/^      resave: false,$/;"	m
+run	src/database/seeds/create-initial-data.ts	/^  public async run(factory: Factory, connection: Connection): Promise<void> {$/;"	m
+saveUninitialized	src/main.ts	/^      saveUninitialized: false,$/;"	m
+secret	src/main.ts	/^      secret: process.env.COOKIE_SECRET,$/;"	m
+session	src/main.ts	/^    session({$/;"	m
+session	src/main.ts	/^import session from 'express-session';$/;"	I
+status	src/users/users.controller.ts	/^    status: 200,$/;"	m
+status	src/users/users.controller.ts	/^    status: 500,$/;"	m
+synchronize	ormconfig.ts	/^  synchronize: false,$/;"	m
+type	ormconfig.ts	/^  type: 'mysql',$/;"	m
+type	src/users/users.controller.ts	/^    type: UserDto,$/;"	m
+up	src/migrations/1664777314195-categoryToType.ts	/^  public async up(queryRunner: QueryRunner): Promise<void> {$/;"	m
+updatedAt	src/entities/ChannelChats.ts	/^  updatedAt: Date;$/;"	m
+updatedAt	src/entities/ChannelMembers.ts	/^  updatedAt: Date;$/;"	m
+updatedAt	src/entities/Channels.ts	/^  updatedAt: Date;$/;"	m
+updatedAt	src/entities/DMs.ts	/^  updatedAt: Date;$/;"	m
+updatedAt	src/entities/Mentions.ts	/^  updatedAt: Date;$/;"	m
+updatedAt	src/entities/Users.ts	/^  updatedAt: Date;$/;"	m
+updatedAt	src/entities/WorkspaceMembers.ts	/^  updatedAt: Date;$/;"	m
+updatedAt	src/entities/Workspaces.ts	/^  updatedAt: Date;$/;"	m
+url	src/database/seeds/create-initial-data.ts	/^          url: 'sleact',$/;"	m
+url	src/entities/Workspaces.ts	/^  url: string;$/;"	m
+use	src/middlewares/logger.middleware.ts	/^  use(request: Request, response: Response, next: NextFunction): void {$/;"	m
+useClass	src/app.module.ts	/^      useClass: AppService,$/;"	m
+useClass	src/app.module.ts	/^      useClass: ConfigService,$/;"	m
+useFactory	src/app.module.ts	/^      useFactory() {$/;"	m
+useValue	src/app.module.ts	/^      useValue: 'CUSTOM_KEY',$/;"	m
+username	ormconfig.ts	/^  username: process.env.DB_USERNAME,$/;"	m
+usersRepository	src/users/users.service.ts	/^    private usersRepository: Repository<Users>,$/;"	m
+where	src/users/users.service.ts	/^      where: { email },$/;"	m
+width	src/entities/Channels.ts	/^    width: 1,$/;"	m
