@@ -5,6 +5,7 @@ import {
   Post,
   Req,
   Res,
+  UseGuards,
   UseInterceptors,
 } from '@nestjs/common';
 import { JoinRequestDto } from './dto/join.request.dto';
@@ -48,6 +49,7 @@ export class UsersController {
     type: UserDto,
   })
   @ApiOperation({ summary: '로그인' })
+  @UseGuards()
   @Post('login')
   login(@User() user) {
     return user;
