@@ -1,16 +1,7 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": [
-    "css",
-    "markdown",
-    "typescript",
-    "typescriptreact"
-  ],
-  "prettier.formatterPriority": -1,
   "styled-components.tags": ["styled", "css", "sty", "createGlobalStyle"],
-  "prettier.configPath": "~/git/slack-clone-coding/prettier.json",
   "extensions": {
     "coc-tsserver": "1.11.11",
-    "coc-prettier": "9.3.1",
     "coc-eslint": "1.5.8",
     "coc-marketplace": "1.9.0",
     "coc-styled-components": "0.5.0",

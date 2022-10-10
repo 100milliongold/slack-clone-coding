@@ -32,7 +32,18 @@ Plug 'puremourning/vimspector'
 Plug 'liuchengxu/vista.vim'
 Plug 'mhinz/vim-startify'
 Plug 'jremmen/vim-ripgrep'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install --frozen-lockfile --production',
+  \ 'branch': 'release/0.x',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
 call plug#end()
+
+
+
+" prettier/vim-prettier START
+let g:prettier#autoformat_config_files = ["~/git/slack-clone-coding/prettier.json"]
+" prettier/vim-prettier END
+
 
 
 "vim-floaterm Start
