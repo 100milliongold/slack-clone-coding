@@ -31,6 +31,7 @@ Plug 'ekalinin/Dockerfile.vim'
 Plug 'puremourning/vimspector'
 Plug 'liuchengxu/vista.vim'
 Plug 'mhinz/vim-startify'
+Plug 'jremmen/vim-ripgrep'
 call plug#end()
 
 

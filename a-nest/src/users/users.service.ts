@@ -1,11 +1,10 @@
-import {
-  Injectable,
-  UnauthorizedException,
-} from '@nestjs/common';
+import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Connection, Repository } from 'typeorm';
 import { Users } from '../entities/Users';
 import bcrypt from 'bcrypt';
+import { WorkspaceMembers } from 'src/entities/WorkspaceMembers';
+import { ChannelMembers } from 'src/entities/ChannelMembers';
 
 @Injectable()
 export class UsersService {
@@ -33,10 +32,20 @@ export class UsersService {
     const hashedPassword = await bcrypt.hash(password, 12);
 
     try {
-      await queryRunner.manager.getRepository(Users).save({
+      const returned = await queryRunner.manager.getRepository(Users).save({
         email,
         nickname,
         password: hashedPassword,
+      });
+
+      await queryRunner.manager.getRepository(WorkspaceMembers).save({
+        UserId: returned.id,
+        WorkspaceId: 1,
+      });
+
+      await queryRunner.manager.getRepository(ChannelMembers).save({
+        UserId: returned.id,
+        ChannelId: 1,
       });
 
       await queryRunner.commitTransaction();
