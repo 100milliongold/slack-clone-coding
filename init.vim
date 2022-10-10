@@ -3,6 +3,7 @@ set nu
 set encoding=UTF-8
 set clipboard=unnamed
 let mapleader=","
+let g:python3_host_prog = '/opt/homebrew/bin/python3'
 
 call plug#begin()
 " This is where we will add plugins to install
