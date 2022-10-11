@@ -191,6 +191,8 @@ let g:which_key_map['g'] = [ ':FloatermNew --height=0.6 --width=0.8 lazygit'    
 let g:which_key_map['t'] = [ ':FloatermNew --height=0.6 --width=0.8 '            , 'terminal']
 let g:which_key_map['v'] = [ '<C-W>v'                          			 , 'split right']
 let g:which_key_map['r'] = [ ':CocCommand tsserver.restart' 			 , 'Coc tsserver restart']
+let g:which_key_map['j'] = [ ':FloatermNew jira issue list' 			 , '지라가 지랄한다.']
+
 
 
 " s is for search
