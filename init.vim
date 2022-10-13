@@ -3,7 +3,7 @@ set nu
 set encoding=UTF-8
 set clipboard=unnamed
 let mapleader=","
-let g:python3_host_prog = '/opt/homebrew/bin/python3'
+let g:python3_host_prog = '/usr/local/Cellar/python@3.10/3.10.7/bin/python3'
 
 call plug#begin()
 " This is where we will add plugins to install
@@ -19,15 +19,13 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-Plug 'dense-analysis/ale'
 Plug 'ryanoasis/vim-devicons'
 Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim'
+" Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'jparise/vim-graphql'
 Plug 'neoclide/npm.nvim', {'do' : 'npm install'}
 Plug 'preservim/nerdcommenter'
-Plug 'tpope/vim-dadbod'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'puremourning/vimspector'
 Plug 'liuchengxu/vista.vim'
@@ -38,15 +36,49 @@ Plug 'prettier/vim-prettier', {
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'dense-analysis/ale'
+" color
+Plug 'lifepillar/vim-solarized8'
 call plug#end()
 
 
+" dense-analysis/ale START
+let g:ale_linters = { 
+\       'javascript': ['eslint'],	
+\	'typescript': ['eslint', 'tsserver', 'typecheck']
+\}
+
+
+" dense-analysis/ale END
+
+
+
+
+" vimspector START
+nnoremap <Leader>dd :call vimspector#Launch()<CR>
+nnoremap <Leader>de :call vimspector#Reset()<CR>
+nnoremap <Leader>dc :call vimspector#Continue()<CR>
+
+nnoremap <Leader>dt :call vimspector#ToggleBreakpoint()<CR>
+nnoremap <Leader>dT :call vimspector#ClearBreakpoints()<CR>
+
+nmap <Leader>dk <Plug>VimspectorRestart
+nmap <Leader>dh <Plug>VimspectorStepOut
+nmap <Leader>dl <Plug>VimspectorStepInto
+nmap <Leader>dj <Plug>VimspectorStepOver
+" vimspector END
+
+
+" color setting
+set background=dark " Set to light for a light variant
 
 " prettier/vim-prettier START
 let g:prettier#autoformat_config_files = ["~/git/slack-clone-coding/prettier.json"]
 " prettier/vim-prettier END
 
 
+set background=light
+autocmd vimenter * ++nested colorscheme solarized8
 
 "vim-floaterm Start
 hi Floaterm guibg=black
@@ -141,6 +173,8 @@ let g:vista_default_executive = 'ctags'
 let g:vista_executive_for = {
   \ 'cpp': 'vim_lsp',
   \ 'php': 'vim_lsp',
+  \ 'typescriptreact': 'coc',
+  \ 'javascriptreact' : 'coc'
   \ }
 
 " Declare the command including the executable and options used to generate ctags output
@@ -223,7 +257,7 @@ let g:which_key_map.s = {
       \ }
 
 " P is for vim-plug
-let g:which_key_map.p = {
+let g:which_key_map.P = {
       \ 'name' : '+plug' ,
       \ 'i' : [':PlugInstall'              , 'install'],
       \ 'u' : [':PlugUpdate'               , 'update'],
@@ -430,7 +464,7 @@ let g:coc_confing_home = '~/git/slack-clone-coding/coc-settings.json'
 
 
 " NerdTree start
-map <F7> :NERDTree<CR>
+map <F7> :NERDTreeToggle<CR>
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -441,7 +475,7 @@ set wildignore+=*.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store,*.min.*
 let NERDTreeRespectWildIgnore=1
 
 let g:NERDTreeMouseMode=3
-let g:NERDTreeIndicatorMapCustom = {
+let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "ModCocList marketplaceified"  : "✹",
     \ "Staged"    : "✚",
     \ "Untracked" : "✭",
