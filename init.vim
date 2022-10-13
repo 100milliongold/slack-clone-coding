@@ -70,15 +70,17 @@ nmap <Leader>dj <Plug>VimspectorStepOver
 
 
 " color setting
-set background=dark " Set to light for a light variant
+" set background=light 
+set background=dark
+autocmd vimenter * ++nested colorscheme solarized8
+" Set to light for a light variant
 
 " prettier/vim-prettier START
 let g:prettier#autoformat_config_files = ["~/git/slack-clone-coding/prettier.json"]
 " prettier/vim-prettier END
 
 
-set background=light
-autocmd vimenter * ++nested colorscheme solarized8
+
 
 "vim-floaterm Start
 hi Floaterm guibg=black
