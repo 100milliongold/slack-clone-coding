@@ -3,7 +3,7 @@ set nu
 set encoding=UTF-8
 set clipboard=unnamed
 let mapleader=","
-let g:python3_host_prog = '/usr/local/Cellar/python@3.10/3.10.7/bin/python3'
+let g:python3_host_prog = '/usr/local/bin/python'
 
 call plug#begin()
 " This is where we will add plugins to install
@@ -70,7 +70,8 @@ nmap <Leader>dj <Plug>VimspectorStepOver
 
 
 " color setting
-" set background=light 
+" set background=light
+let g:solarized_use16=1
 set background=light
 autocmd vimenter * ++nested colorscheme solarized8
 " Set to light for a light variant
