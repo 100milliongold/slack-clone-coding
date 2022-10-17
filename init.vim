@@ -229,7 +229,7 @@ let g:which_key_map['t'] = [ ':FloatermNew --height=0.6 --width=0.8 '           
 let g:which_key_map['v'] = [ '<C-W>v'                          			 , 'split right']
 let g:which_key_map['r'] = [ ':CocCommand tsserver.restart' 			 , 'Coc tsserver restart']
 let g:which_key_map['j'] = [ ':FloatermNew --height=0.6 --width=0.8 jira issue list  -a$(jira me) --columns type,key,summary,status,created' , '지랄하는 지라.']
-
+let g:which_key_map['m'] = [ ':FloatermNew --height=0.9 --width=0.9 mdir' , '파일매니저']
 
 
 " s is for search
