@@ -37,9 +37,23 @@ Plug 'prettier/vim-prettier', {
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'dense-analysis/ale'
+
+" 탭 관리
+Plug 'kien/tabman.vim'
 " color
 Plug 'lifepillar/vim-solarized8'
 call plug#end()
+
+
+" tabman-vim START
+let g:tabman_toggle = '<leader>ot'
+let g:tabman_focus  = '<leader>of'
+let g:tabman_width = 25
+let g:tabman_side = 'left'
+let g:tabman_specials = 1
+let g:tabman_number = 1
+" tabman-vim END 
+
 
 
 " dense-analysis/ale START
