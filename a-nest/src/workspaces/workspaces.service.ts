@@ -15,7 +15,7 @@ export class WorkspacesService {
     @InjectRepository(Channels)
     private channelsRepository: Repository<Channels>,
     @InjectRepository(WorkspaceMembers)
-    private WorkspaceMembers: Repository<WorkspaceMembers>,
+    private workspacesMembersRepository: Repository<WorkspaceMembers>,
     @InjectRepository(ChannelMembers)
     private channelsMemberRepository: Repository<ChannelMembers>,
     @InjectRepository(Users)
@@ -34,5 +34,34 @@ export class WorkspacesService {
     });
   }
 
-  async createWorkspace(name: string, url: string, myId: number) {}
+  async createWorkspace(name: string, url: string, myId: number) {
+    const workspace = this.workspacesRepository.create({
+      name,
+      url,
+      OwnerId: myId,
+    });
+    const rerurned = await this.workspacesRepository.save(workspace);
+    const workspaceMember = new WorkspaceMembers();
+    workspaceMember.UserId = myId;
+    workspaceMember.WorkspaceId = rerurned.id;
+    const channel = new Channels();
+    channel.name = '일반';
+    channel.WorkspaceId = rerurned.id;
+    const [, channelRerurned] = await Promise.all([
+      this.workspacesMembersRepository.save(workspaceMember),
+      this.channelsRepository.save(channel),
+    ]);
+    const channelMember = new ChannelMembers();
+    channelMember.UserId = myId;
+    channelMember.ChannelId = channelReturned.id;
+    this.channelsMemberRepository.save(channelMember);
+  }
+
+  async getWorkspaceMembers(url: string) {
+    this.usersRepository
+      .createQueryBuilder('u')
+      .innerJoin('u.WorkspaceMembers', 'm')
+      .innerJoin('m.Workspace', 'w', 'w.url = :url', { url })
+      .getMany();
+  }
 }
