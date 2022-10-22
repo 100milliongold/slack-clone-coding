@@ -58,7 +58,7 @@ export class WorkspacesService {
   }
 
   async getWorkspaceMembers(url: string) {
-    this.usersRepository
+    return await this.usersRepository
       .createQueryBuilder('u')
       .innerJoin('u.WorkspaceMembers', 'm')
       .innerJoin('m.Workspace', 'w', 'w.url = :url', { url })
