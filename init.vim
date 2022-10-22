@@ -4,6 +4,7 @@ set encoding=UTF-8
 set clipboard=unnamed
 let mapleader=","
 let g:python3_host_prog = '/usr/local/bin/python'
+setlocal shortmess+=c
 
 call plug#begin()
 " This is where we will add plugins to install
@@ -183,6 +184,7 @@ let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
 " Executive used when opening vista sidebar without specifying it.
 " See all the avaliable executives via `:echo g:vista#executives`.
 let g:vista_default_executive = 'ctags'
+let g:vista#executives = ['coc', 'ctags', 'lcn', 'vim_lsp']
 
 " Set the executive for some filetypes explicitly. Use the explicit executive
 " instead of the default one for these filetypes when using `:Vista` without
@@ -191,6 +193,7 @@ let g:vista_executive_for = {
   \ 'cpp': 'vim_lsp',
   \ 'php': 'vim_lsp',
   \ 'typescriptreact': 'coc',
+  \ 'typescript' : 'coc',
   \ 'javascriptreact' : 'coc'
   \ }
 
@@ -238,7 +241,7 @@ let g:which_key_map['E'] = [ ':SSave'                          			 , 'save sessi
 let g:which_key_map['L'] = [ ':SLoad'                          			 , 'load session']
 let g:which_key_map['l'] = [ ':Limelight!!'                     		 , 'limelight']
 let g:which_key_map['r'] = [ ':RnvimrToggle'                    		 , 'ranger' ]
-let g:which_key_map['g'] = [ ':FloatermNew --height=0.6 --width=0.8 lazygit'     , 'git']
+let g:which_key_map['g'] = [ ':FloatermNew --height=0.9 --width=0.8 gitui'     , 'git']
 let g:which_key_map['t'] = [ ':FloatermNew --height=0.6 --width=0.8 '            , 'terminal']
 let g:which_key_map['v'] = [ '<C-W>v'                          			 , 'split right']
 let g:which_key_map['r'] = [ ':CocCommand tsserver.restart' 			 , 'Coc tsserver restart']
