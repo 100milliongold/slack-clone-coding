@@ -85,9 +85,9 @@ nmap <Leader>dj <Plug>VimspectorStepOver
 
 
 " color setting
-" set background=light
-let g:solarized_use16=1
 set background=light
+let g:solarized_use16=1
+" set background=dark
 autocmd vimenter * ++nested colorscheme solarized8
 " Set to light for a light variant
 
@@ -241,7 +241,7 @@ let g:which_key_map['E'] = [ ':SSave'                          			 , 'save sessi
 let g:which_key_map['L'] = [ ':SLoad'                          			 , 'load session']
 let g:which_key_map['l'] = [ ':Limelight!!'                     		 , 'limelight']
 let g:which_key_map['r'] = [ ':RnvimrToggle'                    		 , 'ranger' ]
-let g:which_key_map['g'] = [ ':FloatermNew --height=0.9 --width=0.8 gitui'     , 'git']
+let g:which_key_map['g'] = [ ':FloatermNew --height=0.9 --width=0.8 lazygit'     , 'git']
 let g:which_key_map['t'] = [ ':FloatermNew --height=0.6 --width=0.8 '            , 'terminal']
 let g:which_key_map['v'] = [ '<C-W>v'                          			 , 'split right']
 let g:which_key_map['r'] = [ ':CocCommand tsserver.restart' 			 , 'Coc tsserver restart']
