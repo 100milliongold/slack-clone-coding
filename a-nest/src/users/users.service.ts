@@ -15,6 +15,13 @@ export class UsersService {
     private connection: Connection,
   ) {}
 
+  async findByEmail(email: string) {
+    return this.usersRepository.findOne({
+      where: { email },
+      select: ['id', 'email', 'password'],
+    });
+  }
+
   async join(email: string, nickname: string, password: string) {
     const queryRunner = this.connection.createQueryRunner();
     await queryRunner.connect();
@@ -49,6 +56,7 @@ export class UsersService {
       });
 
       await queryRunner.commitTransaction();
+      return true;
     } catch (error) {
       console.error(error);
       await queryRunner.rollbackTransaction();

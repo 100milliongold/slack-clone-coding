@@ -7,7 +7,7 @@ import {
   ParseIntPipe,
   Post,
 } from '@nestjs/common';
-import { ApiTags } from '@nestjs/swagger';
+import { ApiOperation, ApiTags } from '@nestjs/swagger';
 import { User } from 'src/common/decorators/user.decorator';
 import { Users } from 'src/entities/Users';
 import { CreateWorkspaceDto } from './dto/create-workspace.dto';
@@ -18,11 +18,13 @@ import { WorkspacesService } from './workspaces.service';
 export class WorkspacesController {
   constructor(private workspacesService: WorkspacesService) {}
 
+  @ApiOperation({ summary: '내 워크스페이스 가져오기' })
   @Get()
-  getMyWorkspaces(@User() user: Users) {
+  async getMyWorkspaces(@User() user: Users) {
     return this.workspacesService.findMyWorkspaces(user.id);
   }
 
+  @ApiOperation({ summary: '워크스페이스 만들기' })
   @Post()
   createWorkspace(@User() user: Users, @Body() body: CreateWorkspaceDto) {
     return this.workspacesService.createWorkspace(
@@ -32,15 +34,36 @@ export class WorkspacesController {
     );
   }
 
+  @ApiOperation({ summary: '워크스페이스 멤버 가져오기' })
   @Get(':url/members')
-  getAllMembersFromWorkspace() {}
+  async getAllMembersFromWorkspace(@Param('url') url: string) {
+    return this.workspacesService.getWorkspaceMembers(url);
+  }
 
+  @ApiOperation({ summary: '워크스페이스 멤버 초대하기' })
   @Post(':url/members')
-  inviteMembersToWorkspace() {}
+  inviteMembersToWorkspace(
+    @Param('url') url: string,
+    @Body('email') email: string,
+  ) {
+    return this.workspacesService.createWorkspaceMembers(url, email);
+  }
 
+  @ApiOperation({ summary: '워크스페이스 특정멤버 가져오기' })
   @Delete(':url/members/:id')
-  kickMemberFromWorkspace() {}
+  kickMemberFromWorkspace(
+    @Param('url') url: string,
+    @Param('id', ParseIntPipe) id: number,
+  ) {
+    return this.workspacesService.getWorkspaceMember(url, id);
+  }
 
-  @Get(':url/members/:id')
-  getMemberInfoWorkspace() {}
+  @ApiOperation({ summary: '워크스페이스 특정멤버 가져오기' })
+  @Get(':url/users/:id')
+  getMemberInfoWorkspace(
+    @Param('url') url: string,
+    @Param('id', ParseIntPipe) id: number,
+  ) {
+    return this.workspacesService.getWorkspaceMember(url, id);
+  }
 }
