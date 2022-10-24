@@ -1,0 +1,4 @@
+[submodule "sleact"]
+	path = sleact
+	url = https://github.com/ZeroCho/sleact.git
+	branch = master
