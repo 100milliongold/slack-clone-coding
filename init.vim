@@ -42,7 +42,7 @@ Plug 'dense-analysis/ale'
 " 탭 관리
 Plug 'kien/tabman.vim'
 " color
-Plug 'lifepillar/vim-solarized8'
+" Plug 'lifepillar/vim-solarized8'
 call plug#end()
 
 
@@ -83,12 +83,14 @@ nmap <Leader>dl <Plug>VimspectorStepInto
 nmap <Leader>dj <Plug>VimspectorStepOver
 " vimspector END
 
+" cool retro term 에서 블록 선택 색상 보이기
+set termguicolors
 
 " color setting
-set background=light
-let g:solarized_use16=1
 " set background=dark
-autocmd vimenter * ++nested colorscheme solarized8
+" let g:solarized_use16=1
+" set background=dark
+" autocmd vimenter * ++nested colorscheme solarized8
 " Set to light for a light variant
 
 " prettier/vim-prettier START
