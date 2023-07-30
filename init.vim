@@ -43,6 +43,10 @@ Plug 'dense-analysis/ale'
 Plug 'kien/tabman.vim'
 " color
 " Plug 'lifepillar/vim-solarized8'
+
+
+" 태그
+Plug 'vim-scripts/taglist.vim'
 call plug#end()
 
 
@@ -258,9 +262,7 @@ let g:which_key_map['g'] = [ ':FloatermNew --height=0.9 --width=0.8 lazygit'    
 let g:which_key_map['t'] = [ ':FloatermNew --height=0.6 --width=0.8 '            , 'terminal']
 let g:which_key_map['v'] = [ '<C-W>v'                          			 , 'split right']
 let g:which_key_map['r'] = [ ':CocCommand tsserver.restart' 			 , 'Coc tsserver restart']
-let g:which_key_map['j'] = [ ':FloatermNew --height=0.6 --width=0.8 jira issue list  -a$(jira me) --columns type,key,summary,status,created' , '지랄하는 지라.']
 let g:which_key_map['m'] = [ ':FloatermNew --height=0.9 --width=0.9 mdir' , '파일매니저']
-
 
 " s is for search
 let g:which_key_map.s = {
@@ -430,6 +432,13 @@ map <Leader>c<space> <plug>NERDComComment
 
 " NERD Commenter end
 
+" tags
+let g:Tlist_Use_Right_Window = 1
+"분할 창을 오른쪽에 배치
+let g:Tlist_Inc_Winwidth = 0
+"콘솔창에서 vim 사용하기
+let g:Tlist_Auto_Open = 1
+"vi 실행시 TagList 자동실행
 
 
 " prettier/vim-prettier start
