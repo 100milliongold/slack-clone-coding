@@ -70,7 +70,8 @@ let g:ale_linters = {
 " dense-analysis/ale END
 
 
-
+" 버퍼 닫으면 빔이 종료안되게
+g:netrw_fastbrowse=0
 
 " vimspector START
 nnoremap <Leader>dd :call vimspector#Launch()<CR>
