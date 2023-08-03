@@ -38,6 +38,10 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'dense-analysis/ale'
 
+" 버퍼 닫으면 빔이 종료안되게
+Plug 'qpkorr/vim-bufkill'
+
+
 " 탭 관리
 Plug 'kien/tabman.vim'
 " color
@@ -52,7 +56,7 @@ call plug#end()
 " tabman-vim START
 let g:tabman_toggle = '<leader>ot'
 let g:tabman_focus  = '<leader>of'
-let g:tabman_width = 25
+let g:tabman_width = 15
 let g:tabman_side = 'left'
 let g:tabman_specials = 1
 let g:tabman_number = 1
@@ -70,8 +74,6 @@ let g:ale_linters = {
 " dense-analysis/ale END
 
 
-" 버퍼 닫으면 빔이 종료안되게
-g:netrw_fastbrowse=0
 
 " vimspector START
 nnoremap <Leader>dd :call vimspector#Launch()<CR>
@@ -243,7 +245,7 @@ let g:which_key_map['g'] = [ ':FloatermNew --height=0.9 --width=0.8 lazygit'    
 let g:which_key_map['t'] = [ ':FloatermNew --height=0.6 --width=0.8 '            , 'terminal']
 let g:which_key_map['v'] = [ '<C-W>v'                          			 , 'split right']
 let g:which_key_map['r'] = [ ':CocCommand tsserver.restart' 			 , 'Coc tsserver restart']
-let g:which_key_map['m'] = [ ':FloatermNew --height=0.9 --width=0.9 mdir' , '파일매니저']
+let g:which_key_map['m'] = [ ':FloatermNew --height=0.9 --width=0.9 mc' , '파일매니저']
 
 " s is for search
 let g:which_key_map.s = {
