@@ -7,18 +7,6 @@
     "coc-marketplace": "1.9.0",
     "coc-styled-components": "0.5.0",
     "coc-yaml": "1.9.0",
-    "coc-docker": "1.0.2",
-    "coc-java": "1.22.4"
-  },
-  "java.configuration.runtimes": [
-    {
-      "name": "AdoptOpenJDK 11",
-      "path": "/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home/bin/java",
-      "default": true
-    },
-    {
-      "name": "Zulu 8.58.0.13",
-      "path": "/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/bin/java"
-    }
-  ]
+    "coc-docker": "1.0.2"
+  }
 }
